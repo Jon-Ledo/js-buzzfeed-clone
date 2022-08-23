@@ -27,7 +27,54 @@ h1 {
   text-align: left;
 }
 
+h2 {
+  font-size: 3.5rem;
+  line-height: 1.05;
+  text-align: center;
+}
+
 p {
   font-size: 1.125rem;
   line-height: 1.2;
+}
+
+.title-block {
+  width: 600px;
+  height: 210px;
+  background-color: #6660dd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.answer-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 16px 0 23px 0;
+}
+
+.answer-block {
+  width: 286px;
+  height: 286px;
+  border-radius: 5px;
+  box-shadow: #00000012 0 0 0 1px;
+  text-align: center;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.answer-block img {
+  width: 100%;
+}
+
+.answer-block p {
+  font-size: 11px;
+  font-style: italic;
+}
+
+answer-block a {
+  color: #808080;
 }
