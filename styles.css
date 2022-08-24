@@ -75,6 +75,12 @@ p {
   font-style: italic;
 }
 
-answer-block a {
+.answer-block a {
   color: #808080;
+}
+
+.result-block {
+  width: 600px;
+  background-color: #ff3d9e;
+  border-radius: 5px;
 }
