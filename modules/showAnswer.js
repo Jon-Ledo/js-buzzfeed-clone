@@ -29,10 +29,17 @@ export function showAnswer(chosenAnswers) {
   answerDisplay.append(answerBlock)
   
 
-  const allResultBlocks = document.querySelectorAll('.result-block')
-  allResultBlocks.forEach((resultBlock, index) => {
-    if (index > 0) {
-      answerDisplay.removeChild(resultBlock)
-    }
+  // Remove Duplicating results {OLD}
+  // const allResultBlocks = document.querySelectorAll('.result-block')
+  // allResultBlocks.forEach((resultBlock, index) => {
+  //   if (index > 0) {
+  //     answerDisplay.removeChild(resultBlock)
+  //   }
+  // })
+
+  // Remove Event Listeners using replaceWith and cloneNode {NEW}
+  const allAnswerBlocks = document.querySelectorAll('.answer-block')
+  allAnswerBlocks.forEach(block => {
+    block.replaceWith(block.cloneNode(true))
   })
 }
