@@ -21,6 +21,8 @@ export function handleClick(questionId, chosenAnswer, unansweredQuestions) {
   if (!unansweredQuestions.length) {
     showAnswer(chosenAnswers)
     // scroll to answer div
-    location.href = '#answer'
+    // location.href = '#answer'
+    const result = document.querySelector('#answer')
+    result.scrollIntoView(false)
   }
 }
