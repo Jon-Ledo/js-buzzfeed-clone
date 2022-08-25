@@ -1,4 +1,5 @@
 import { answers } from "../data/answers.js"
+import { handleClick } from "./handleClick.js"
 
 export function showAnswer(chosenAnswers) {
   let result
@@ -26,10 +27,12 @@ export function showAnswer(chosenAnswers) {
 
   answerBlock.append(answerTitle, answerImage)
   answerDisplay.append(answerBlock)
+  
 
-
-  const allAnswerBlocks = document.querySelectorAll('.answer-block')
-  Array.from(allAnswerBlocks).forEach(answerBlock => {
-    answerBlock.replaceWith(answerBlock)
+  const allResultBlocks = document.querySelectorAll('.result-block')
+  allResultBlocks.forEach((resultBlock, index) => {
+    if (index > 0) {
+      answerDisplay.removeChild(resultBlock)
+    }
   })
 }

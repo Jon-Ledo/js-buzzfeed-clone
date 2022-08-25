@@ -7,8 +7,8 @@ export function handleClick(questionId, chosenAnswer, unansweredQuestions) {
   if (unansweredQuestions.includes(questionId)){
     chosenAnswers.push(chosenAnswer)
   }
-  const itemToRemove = unansweredQuestions.indexOf(questionId)
 
+  const itemToRemove = unansweredQuestions.indexOf(questionId)
   if (itemToRemove > -1) {
     unansweredQuestions.splice(itemToRemove, 1)
   }
@@ -19,8 +19,8 @@ export function handleClick(questionId, chosenAnswer, unansweredQuestions) {
 
 
   if (!unansweredQuestions.length) {
+    showAnswer(chosenAnswers)
     // scroll to answer div
     location.href = '#answer'
-    showAnswer(chosenAnswers)
   }
 }
